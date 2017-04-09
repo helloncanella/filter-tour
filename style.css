@@ -1,0 +1,170 @@
+.list {
+  position: relative;
+  user-select: none;
+}
+
+.list .title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.list .subtitle {
+  font-size: 13pt;
+  color: #808080;
+}
+
+.list ul {
+  max-width: 97%;
+  height: 80vh;
+  margin-bottom: 2rem;
+  overflow: auto;
+  max-height: 500px;
+  list-style: none !important;
+  margin: 0 auto;
+  padding-bottom: 10vh;
+}
+
+.list ul li {
+  border: 1px solid #E2E7EC;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  margin-right: 2px;
+}
+
+.list ul li .secondary-text {
+  color: gray;
+  font-size: 13pt;
+}
+
+.list ul li.active, .list ul li.highlighted {
+  border: 1px solid #5AB78F;
+}
+
+.list ul li.active, .list ul li.active:after, .list ul li.highlighted, .list ul li.highlighted:after {
+  color: #5AB78F !important;
+}
+
+.list ul li.active {
+  animation: anime 0.2s;
+}
+
+@keyframes anime {
+  50% {
+    transform: translateY(1px) scale(0.99);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.list ul li:after {
+  content: "\F0DA";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  color: #E2E7E6;
+  display: inline;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.list .opacity {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+  height: 10vh;
+  width: 100%;
+}
+
+.list .opacity .marker::after {
+  content: "\F0D7";
+  display: inline-block;
+  font-family: FontAwesome;
+  position: absolute;
+  color: #A2B2C3;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.filter-component {
+  font-size: 15pt !important;
+  padding-top: 5rem;
+  position: relative;
+}
+
+.filter-component * {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
+}
+
+.filter-component .list.categories .title, .filter-component .list.characteristics .title {
+  color: #19544D;
+}
+
+.filter-component .list.adequated-tools .title {
+  color: #EA5153;
+}
+
+.filter-component .protection-layer {
+  position: relative;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: none;
+}
+
+.filter-component ::-webkit-scrollbar {
+  width: 3%;
+  background: transparent;
+}
+
+.filter-component ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.filter-component ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+.filter-tour {
+  position: relative;
+}
+
+.filter-tour * {
+  cursor: none !important;
+}
+
+.filter-tour .cursor {
+  position: absolute;
+  z-index: 10;
+}
+
+.filter-tour .cursor::after {
+  display: block;
+  content: '\F245';
+  font-family: FontAwesome;
+  position: absolute;
+}
+body {
+  background: #ece7e7;
+}
+
+.redBg {
+  background-color: red;
+  border-radius: 51px;
+  color: white;
+  padding: 5px;
+}
